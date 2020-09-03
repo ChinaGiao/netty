@@ -295,6 +295,7 @@ public abstract class AbstractNioByteChannel extends AbstractNioChannel {
             clearOpWrite();
 
             // Schedule flush again later so other tasks can be picked up in the meantime
+            // 为啥要添加一个flush任务 看不懂
             eventLoop().execute(flushTask);
         }
     }

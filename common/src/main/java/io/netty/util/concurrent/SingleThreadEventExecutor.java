@@ -57,6 +57,7 @@ public abstract class SingleThreadEventExecutor extends AbstractScheduledEventEx
 
     private static final int ST_NOT_STARTED = 1;
     private static final int ST_STARTED = 2;
+    // after invoke method shutdownGracefully
     private static final int ST_SHUTTING_DOWN = 3;
     private static final int ST_SHUTDOWN = 4;
     private static final int ST_TERMINATED = 5;

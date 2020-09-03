@@ -1131,6 +1131,7 @@ public abstract class AbstractByteBuf extends ByteBuf {
     public int writeBytes(ScatteringByteChannel in, int length) throws IOException {
         ensureWritable(length);
         int writtenBytes = setBytes(writerIndex, in, length);
+        // no data readable return -1
         if (writtenBytes > 0) {
             writerIndex += writtenBytes;
         }
